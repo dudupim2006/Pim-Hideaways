@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Open Graph Tags -->
+  <title>Request Reservation | Portugal Vacation Rentals</title>
+  <meta name="description" content="Request a reservation for Monte Caeiro or Casa da Pintora. Secure your dream getaway in Portugal.">
+  <meta property="og:title" content="Book Your Stay - Portugal Retreats">
+  <meta property="og:description" content="Submit a reservation request for our luxury properties in Portugal.">
+  <meta property="og:url" content="https://yourdomain.com/booking.html">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body style="opacity: 0;">
+
+  <!-- Sticky Navbar -->
+  <nav class="navbar">
+    <div class="container nav-content">
+      <a href="index.html" class="logo">PIM Hideaways</a>
+      <div class="nav-links">
+        <a href="index.html"><span class="material-symbols-outlined">arrow_back</span> Back to Home</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Booking Area -->
+  <main class="container booking-page fade-in-section">
+    
+    <h1 class="section-title fade-in-section" style="text-align: center; margin-bottom: 40px;">Request a Reservation</h1>
+
+    <!-- Crucial Text Banner -->
+    <div class="disclaimer-banner fade-in-section">
+      <span class="material-symbols-outlined">info</span>
+      <p><strong>Please note:</strong> Submitting this form sends a reservation request, not a confirmed booking. We will review your dates and reach out shortly to finalize your reservation and arrange payment.</p>
+    </div>
+
+    <!-- Booking Form -->
+    <form id="reservation-form" name="reservation" method="POST" data-netlify="true" class="booking-form fade-in-section">
+      
+      <div class="floating-label-group">
+        <select id="property-select" name="property" required>
+          <option value="" disabled selected></option>
+          <option value="monte-caeiro">Monte Caeiro (Porto Covo)</option>
+          <option value="casa-pintora">Casa da Pintora (Olhão)</option>
+        </select>
+        <label for="property-select">Which Property?</label>
+      </div>
+
+      <div class="form-row">
+        <div class="floating-label-group">
+          <input type="text" id="firstName" name="firstName" placeholder=" " required>
+          <label for="firstName">First Name</label>
+        </div>
+        <div class="floating-label-group">
+          <input type="text" id="lastName" name="lastName" placeholder=" " required>
+          <label for="lastName">Last Name</label>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="floating-label-group">
+          <input type="email" id="email" name="_replyto" placeholder=" " required>
+          <label for="email">Email Address</label>
+        </div>
+        <div class="floating-label-group">
+          <input type="tel" id="phone" name="phone" placeholder=" " required>
+          <label for="phone">Phone Number</label>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="floating-label-group">
+          <input type="date" id="checkin" name="checkin" placeholder=" " required>
+          <label for="checkin">Check-in Date</label>
+        </div>
+        <div class="floating-label-group">
+          <input type="date" id="checkout" name="checkout" placeholder=" " required>
+          <label for="checkout">Check-out Date</label>
+        </div>
+      </div>
+
+      <div class="floating-label-group">
+        <select id="guests" name="guests" required>
+          <option value="1">1 Guest</option>
+          <option value="2">2 Guests</option>
+          <option value="3">3 Guests</option>
+          <option value="4">4 Guests</option>
+          <option value="5">5 Guests</option>
+          <option value="6">6 Guests</option>
+        </select>
+        <label for="guests">Number of Guests</label>
+      </div>
+
+      <!-- Rules Note -->
+      <div class="rules-note">
+        <span class="material-symbols-outlined">schedule</span>
+        <span><strong>Standard Times:</strong> Check-in after 3:00 PM | Check-out by 11:00 AM.</span>
+      </div>
+
+      <div class="form-group checkbox">
+        <input type="checkbox" id="exceptions" name="exceptions_requested">
+        <label for="exceptions">I would like to request an early check-in or late check-out.</label>
+      </div>
+
+      <div class="floating-label-group">
+        <textarea id="message" name="message" rows="4" placeholder=" "></textarea>
+        <label for="message">Special Requests / Additional Message</label>
+      </div>
+
+      <button type="submit" class="btn-primary" style="width: 100%; font-size: 1.1rem; padding: 15px;">Submit Reservation Request</button>
+    </form>
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer>
+    <div class="container">
+      <h2>PIM Hideaways</h2>
+      <p>&copy; 2026 PIM Hideaways. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
