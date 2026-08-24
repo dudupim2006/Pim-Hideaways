@@ -18,20 +18,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,300;0,400;0,600;0,700;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   
-  <!-- Mapbox GL JS -->
-  <script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>
-  <link href='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css' rel='stylesheet' />
-  
-  <link rel="stylesheet" href="css/styles.css?v=17">
+  <link rel="stylesheet" href="css/styles.css?v=18">
 </head>
 <body style="opacity: 0;">
 
 
 
   <!-- Premium Preloader Intro -->
-  <div id="intro-preloader">
-    <div class="intro-logo-container">
-      <h1 class="intro-logo">Pim Hideaways</h1>
+  <div id="intro-preloader" style="display: flex; justify-content: center; align-items: center;">
+    <div class="intro-logo-container" style="position: relative; display: inline-block;">
+      <span class="intro-logo-hidden" style="visibility: hidden;">PIM HIDEAWAYS</span>
+      <h1 class="intro-logo" style="position: absolute; top: 0; left: 0; margin: 0;">PIM HIDEAWAYS</h1>
     </div>
   </div>
 
@@ -48,7 +45,7 @@
   <!-- Sticky Navbar -->
   <nav class="navbar">
     <div class="container nav-content">
-      <a href="index.html" class="logo hover-target">Pim Hideaways</a>
+      <a href="index.html" class="logo hover-target">PIM HIDEAWAYS</a>
       <button class="hamburger hover-target" id="hamburger-menu" aria-label="Menu">
         <span></span>
         <span></span>
@@ -81,17 +78,6 @@
   <main>
     <!-- Property Stack removed in favor of Split-screen buttons -->
   </main>
-
-  <!-- Interactive Mapbox Map -->
-  <section class="map-section fade-in-section" style="width: 100%; height: 60vh; min-height: 400px; position: relative;">
-    <div id="mapbox-container" style="width: 100%; height: 100%;"></div>
-    
-    <!-- Custom Map Overlay Text -->
-    <div style="position: absolute; top: 40px; left: 40px; pointer-events: none; z-index: 10; background: rgba(255,255,255,0.9); backdrop-filter: blur(5px); padding: 20px 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-      <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin: 0; color: var(--color-charcoal);">Our Locations</h3>
-      <p style="margin: 5px 0 0; color: var(--color-gray); font-size: 0.95rem;">Southern Portugal</p>
-    </div>
-  </section>
 
   <!-- Contact Section -->
   <section class="contact-section container fade-in-section">

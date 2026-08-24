@@ -303,37 +303,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* 7. Mapbox GL JS Integration */
-  const mapContainer = document.getElementById('mapbox-container');
-  if (mapContainer && typeof mapboxgl !== 'undefined') {
-    // Note: You must replace this token with a valid Mapbox public token
-    mapboxgl.accessToken = 'YOUR_MAPBOX_TOKEN_HERE'; // Placeholder Token
-    
-    const map = new mapboxgl.Map({
-      container: 'mapbox-container',
-      style: 'mapbox://styles/mapbox/dark-v11', // A premium dark style
-      center: [-8.1, 37.5], // Centered in Southern Portugal
-      zoom: 7.5,
-      scrollZoom: false
-    });
-    
-    map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
-
-    // Marker for Monte Caeiro (Porto Covo area)
-    const el1 = document.createElement('div');
-    el1.className = 'mapbox-custom-marker';
-    new mapboxgl.Marker(el1)
-      .setLngLat([-8.79, 37.85])
-      .setPopup(new mapboxgl.Popup({ offset: 25 }).setHTML('<h3 style="margin:0; font-family:\'Playfair Display\';">Monte Caeiro</h3><p style="margin:5px 0 0;">Porto Covo</p>'))
-      .addTo(map);
-
-    // Marker for Casa da Pintora (Olhão area)
-    const el2 = document.createElement('div');
-    el2.className = 'mapbox-custom-marker';
-    new mapboxgl.Marker(el2)
-      .setLngLat([-7.84, 37.03])
-      .setPopup(new mapboxgl.Popup({ offset: 25 }).setHTML('<h3 style="margin:0; font-family:\'Playfair Display\';">Casa da Pintora</h3><p style="margin:5px 0 0;">Olhão</p>'))
-      .addTo(map);
-  }
-
 });

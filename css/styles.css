@@ -1279,24 +1279,25 @@ body.fade-out {
 }
 
 .intro-logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: visible;
+  display: inline-block;
+  position: relative;
+}
+
+.intro-logo, .intro-logo-hidden {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 500;
+  color: var(--color-charcoal);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  white-space: nowrap;
+  line-height: 1;
 }
 
 .intro-logo {
-  font-family: 'Pinyon Script', cursive;
-  font-size: clamp(3rem, 7vw, 5.5rem);
-  font-weight: 400;
-  color: var(--color-charcoal);
-  text-transform: none;
-  letter-spacing: normal;
-  white-space: nowrap;
   overflow: hidden;
   border-right: 2px solid var(--color-charcoal);
   width: 0;
-  line-height: 1;
   /* Typing is 1.8s, delay is 0.4s, hold is 0.8s, fade out is 0.5s */
   animation: 
     introTypewriter 1.8s steps(13) 0.4s forwards,
@@ -1305,8 +1306,8 @@ body.fade-out {
 }
 
 @keyframes introTypewriter {
-  from { width: 0 }
-  to { width: 13ch } /* length of "Pim Hideaways" is 13 characters */
+  from { width: 0; }
+  to { width: 100%; }
 }
 
 @keyframes introTypewriterCaret {
@@ -2048,18 +2049,3 @@ body {
 
 .mc-lightbox-prev { left: 20px; }
 .mc-lightbox-next { right: 20px; }
-
-/* 6. Mapbox Custom Markers */
-.mapbox-custom-marker {
-  width: 20px;
-  height: 20px;
-  background-color: var(--color-charcoal);
-  border: 2px solid white;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-.mapbox-custom-marker:hover {
-  transform: scale(1.2);
-}
