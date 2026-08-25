@@ -781,7 +781,7 @@ img {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   padding: 40px 24px;
-  contain: content; /* Helps browser skip rendering layout if offscreen */
+   /* Helps browser skip rendering layout if offscreen */
 }
 
 .gallery-item {
