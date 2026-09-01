@@ -1600,21 +1600,23 @@ img,
   text-align: center;
 }
 
-/* Mobile: stack the two property panes vertically */
+/* Mobile: stack the two property panes vertically, equal sizes */
 @media (max-width: 768px) {
   .hero-split-container {
     flex-direction: column;
-    height: auto;
+    height: auto !important;
     margin-top: 0;
+    width: 100% !important;
+    max-width: 100% !important;
   }
   .hero-split-pane {
-    flex: none;
+    flex: none !important;
     width: 100%;
-    height: 50vh;
-    min-height: 260px;
+    height: 45vh;
+    min-height: 240px;
   }
   .hero-split-pane:hover {
-    flex: none;
+    flex: none !important;
   }
   .hero-split-title {
     font-size: clamp(2rem, 8vw, 3rem);
@@ -1734,7 +1736,13 @@ body {
   justify-content: center;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: fixed; /* iOS override below */
+}
+/* iOS Safari: background-attachment:fixed is broken — image disappears on scroll */
+@media (max-width: 768px) {
+  .mc-hero {
+    background-attachment: scroll;
+  }
 }
 .mc-hero::after {
   content: '';
