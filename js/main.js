@@ -11,11 +11,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLogo = document.querySelector('.navbar .logo');
   
   if (preloader && introLogo && navLogo) {
-    if (sessionStorage.getItem("hasSeenIntro")) {
+    // skipIntro is only set when the user actively navigates away FROM the homepage.
+    // It is cleared immediately when we read it, so refresh always shows the animation.
+    const shouldSkip = sessionStorage.getItem("skipIntro");
+    sessionStorage.removeItem("skipIntro"); // Clear immediately — refresh will play animation
+
+    if (shouldSkip) {
       preloader.style.display = "none";
       navLogo.style.opacity = "1";
     } else {
-      sessionStorage.setItem("hasSeenIntro", "true");
       document.body.classList.add('no-scroll');
     
     // After typing animation completes (approx 2.2s)
@@ -130,6 +134,11 @@ document.addEventListener('DOMContentLoaded', () => {
         !href.startsWith('tel:') &&
         target !== '_blank'
       ) {
+        // If we are currently on the homepage and navigating away, flag it
+        // so that "Back to Home" skips the intro animation
+        if (document.getElementById('intro-preloader')) {
+          sessionStorage.setItem("skipIntro", "true");
+        }
         e.preventDefault();
         document.body.classList.add('fade-out');
         setTimeout(() => {
