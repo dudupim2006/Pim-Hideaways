@@ -1734,15 +1734,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* iOS override below */
+  overflow: hidden;
 }
-/* iOS Safari: background-attachment:fixed is broken — image disappears on scroll */
-@media (max-width: 768px) {
-  .mc-hero {
-    background-attachment: scroll;
-  }
+/* Hero background image tag — works on all iOS versions unlike background-attachment:fixed */
+.mc-hero-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
 }
 .mc-hero::after {
   content: '';
