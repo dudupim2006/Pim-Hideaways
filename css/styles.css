@@ -2033,3 +2033,29 @@ body {
 
 .mc-lightbox-prev { left: 20px; }
 .mc-lightbox-next { right: 20px; }
+
+/* Casa da Pintora specific squares */
+.mc-zigzag-img-wrapper.with-pintora-lightblue-square::before,
+.mc-zigzag-img-wrapper.with-pintora-darkblue-square::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 0 !important;
+}
+.mc-zigzag-img-wrapper.with-pintora-lightblue-square::before {
+  background-color: #0296FF;
+}
+.mc-zigzag-img-wrapper.with-pintora-darkblue-square::before {
+  background-color: #01018B;
+}
+.mc-zigzag-row:nth-child(even) .mc-zigzag-img-wrapper.with-pintora-lightblue-square::before,
+.mc-zigzag-row:nth-child(even) .mc-zigzag-img-wrapper.with-pintora-darkblue-square::before {
+  top: auto;
+  bottom: 30px;
+  left: auto;
+  right: 30px;
+}
