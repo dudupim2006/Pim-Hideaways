@@ -11,7 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLogo = document.querySelector('.navbar .logo');
   
   if (preloader && introLogo && navLogo) {
-    document.body.classList.add('no-scroll');
+    if (sessionStorage.getItem("hasSeenIntro")) {
+      preloader.style.display = "none";
+      navLogo.style.opacity = "1";
+    } else {
+      sessionStorage.setItem("hasSeenIntro", "true");
+      document.body.classList.add('no-scroll');
     
     // After typing animation completes (approx 2.2s)
     setTimeout(() => {
@@ -59,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 500); // Wait for scale transition to finish
       }, 850);
     }, 2400);
+    }
   }
 
   /* --- Top Creative Inspired Interactions --- */

@@ -2061,3 +2061,18 @@ body {
   left: auto;
   right: 30px;
 }
+
+/* Make navbar visible over all hero sections */
+.navbar:not(.scrolled):not(.menu-open) .nav-links a,
+.navbar:not(.scrolled):not(.menu-open) .logo {
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.7), 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.navbar:not(.scrolled):not(.menu-open) .hamburger span {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+
+html.skip-intro #intro-preloader { display: none !important; }
+html.skip-intro .navbar .logo { opacity: 1 !important; }
