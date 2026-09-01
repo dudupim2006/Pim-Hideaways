@@ -2085,14 +2085,14 @@ body {
   right: 30px;
 }
 
-/* Make navbar visible over all hero sections */
-.navbar:not(.scrolled):not(.menu-open) .nav-links a,
-.navbar:not(.scrolled):not(.menu-open) .logo {
+/* Make navbar visible over dark hero sections (detail pages only) */
+body.detail-page .navbar:not(.scrolled):not(.menu-open) .nav-links a,
+body.detail-page .navbar:not(.scrolled):not(.menu-open) .logo {
   color: #fff;
   text-shadow: 0 2px 8px rgba(0,0,0,0.7), 0 4px 20px rgba(0,0,0,0.5);
 }
 
-.navbar:not(.scrolled):not(.menu-open) .hamburger span {
+body.detail-page .navbar:not(.scrolled):not(.menu-open) .hamburger span {
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.7);
 }
