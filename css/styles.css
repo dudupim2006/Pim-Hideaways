@@ -229,7 +229,7 @@ img {
 }
 
 .hero-title-top {
-  font-size: clamp(3rem, 6vw, 6rem);
+  font-size: clamp(2.5rem, 8vw, 6rem);
   line-height: 0.9;
   margin: 0;
   position: relative;
@@ -271,7 +271,7 @@ img {
 }
 
 .hero-title-bottom {
-  font-size: clamp(3rem, 6vw, 6rem);
+  font-size: clamp(2.5rem, 8vw, 6rem);
   line-height: 0.9;
   margin: 0;
   position: relative;
@@ -458,7 +458,7 @@ img {
 }
 
 .contact-card-info h3 {
-  font-size: 1.25rem;
+  font-size: clamp(1.05rem, 3vw, 1.25rem);
   font-weight: 600;
   margin-bottom: 0.2rem;
   text-transform: none;
@@ -740,7 +740,7 @@ img {
   justify-content: space-between;
   align-items: center;
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: clamp(1.05rem, 3vw, 1.25rem);
   cursor: pointer;
   color: var(--color-charcoal);
   transition: var(--transition);
@@ -1657,7 +1657,7 @@ img,
 .pintora-theme .journal-item h3 {
   color: white;
   margin-bottom: 10px;
-  font-size: 1.25rem;
+  font-size: clamp(1.05rem, 3vw, 1.25rem);
   letter-spacing: normal;
 }
 .pintora-theme .journal-item p {
@@ -1764,7 +1764,7 @@ body {
 }
 .mc-hero-content h1 {
   text-shadow: 0 4px 20px rgba(0,0,0,0.6);
-  font-size: clamp(3rem, 6vw, 6rem);
+  font-size: clamp(2.5rem, 8vw, 6rem);
   margin-bottom: 20px;
   color: #fff;
   letter-spacing: -1px;
@@ -1787,7 +1787,7 @@ body {
   max-width: 800px;
   margin: 0 auto 80px;
   text-align: center;
-  font-size: 1.25rem;
+  font-size: clamp(1.05rem, 3vw, 1.25rem);
   line-height: 1.8;
   color: var(--color-charcoal);
 }
@@ -1795,10 +1795,13 @@ body {
 .mc-zigzag {
   display: flex;
   flex-direction: column;
-  gap: 120px;
+  gap: 80px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
+}
+@media (min-width: 900px) {
+  .mc-zigzag { gap: 120px; padding: 0 40px; }
 }
 
 .mc-zigzag-row {
@@ -1824,8 +1827,11 @@ body {
 .mc-zigzag-img-wrapper {
   position: relative;
   width: 100%;
-  height: 65vh;
-  min-height: 450px;
+  height: 50vh;
+  min-height: 300px;
+}
+@media (min-width: 900px) {
+  .mc-zigzag-img-wrapper { height: 65vh; min-height: 450px; }
 }
 
 .mc-zigzag-img-wrapper.with-blue-square::before {
@@ -1878,7 +1884,7 @@ body {
 }
 
 .mc-zigzag-text h3 {
-  font-size: 2.2rem;
+  font-size: clamp(1.6rem, 5vw, 2.2rem);
   margin-bottom: 20px;
   color: var(--color-charcoal);
 }
@@ -1918,7 +1924,7 @@ body {
 @media (max-width: 900px) {
   .mc-gallery-grid {
     grid-template-columns: 1fr;
-    grid-auto-rows: 300px;
+    grid-auto-rows: 220px;
   }
   .mc-gallery-item-1, .mc-gallery-item-2, .mc-gallery-item-3, .mc-gallery-item-4, .mc-gallery-item-5 {
     grid-column: span 1;
