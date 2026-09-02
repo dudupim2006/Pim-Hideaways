@@ -11,8 +11,8 @@
   --color-success: #68D391;
 
   /* Typography - Modern Agency Aesthetic */
-  --font-heading: 'Inter', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Buongiorno Rastellino', serif;
+  --font-body: 'Montserrat', sans-serif;
 
   /* Layout & Modern Elements */
   --nav-height: 80px;
@@ -282,6 +282,7 @@ img {
 
 /* Make logo white when menu is open */
 .navbar.menu-open .logo {
+  font-family: 'Inter', sans-serif !important;
   color: var(--color-white);
 }
 
@@ -1442,7 +1443,7 @@ img,
   border: none !important;
   border-bottom: 1px solid rgba(44, 53, 57, 0.3) !important;
   padding: 10px 0 !important;
-  font-family: 'Playfair Display', serif !important;
+  font-family: 'Buongiorno Rastellino', serif !important;
   font-size: 1.1rem !important;
   font-style: italic;
   color: var(--color-charcoal) !important;
@@ -1456,7 +1457,7 @@ img,
 .contact-form .form-group label {
   top: 10px;
   left: 0;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Buongiorno Rastellino', serif;
   font-style: italic;
   font-size: 1.1rem;
   color: var(--color-gray);
@@ -1478,7 +1479,7 @@ img,
   color: white !important;
   border: 1px solid var(--color-charcoal) !important;
   padding: 15px 40px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Buongiorno Rastellino', serif;
   font-size: 1rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1508,7 +1509,7 @@ img,
   padding: 15px 30px;
   border-radius: 50px;
   text-decoration: none;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 1rem;
   text-transform: uppercase;
@@ -1589,7 +1590,7 @@ img,
   position: relative;
   z-index: 3;
   color: white;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Buongiorno Rastellino', serif;
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   text-shadow: 0 2px 12px rgba(0,0,0,0.5);
   font-weight: 300;
@@ -1682,6 +1683,7 @@ img,
 }
 
 .navbar .logo {
+  font-family: 'Inter', sans-serif !important;
   opacity: 0;
 }
 
@@ -1697,7 +1699,7 @@ footer {
 }
 footer h2 {
   color: white !important;
-  font-family: 'Playfair Display', serif !important;
+  font-family: 'Buongiorno Rastellino', serif !important;
   font-weight: 400 !important;
   font-size: 2.5rem !important;
   letter-spacing: 0.15em !important;
@@ -1706,14 +1708,14 @@ footer h2 {
 }
 footer p {
   color: rgba(255, 255, 255, 0.5) !important;
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Montserrat', sans-serif !important;
   font-size: 0.85rem !important;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
 footer .footer-subtitle {
-  font-family: 'Pinyon Script', cursive !important;
+  font-family: 'Buongiorno Rastellino', serif !important;
   font-size: 1.8rem !important;
   text-transform: none !important;
   letter-spacing: 0 !important;
@@ -1833,7 +1835,7 @@ body {
   left: 30px;
   width: 100%;
   height: 100%;
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAAD5Ip3+AAAADUlEQVQIHWOIXHD2PwAF4gLGoZqg2wAAAABJRU5ErkJggg==');
+  background-color: #0b2545; background-image: none;
   background-size: cover;
   z-index: -1;
   border-radius: 0 !important;
@@ -1846,7 +1848,7 @@ body {
   left: 30px;
   width: 100%;
   height: 100%;
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAAD5Ip3+AAAADUlEQVQIHWN4I6v8HwAFUQIs4aBbWwAAAABJRU5ErkJggg==');
+  background-color: #0b2545; background-image: none;
   background-size: cover;
   z-index: -1;
   border-radius: 0 !important;
@@ -1942,7 +1944,7 @@ body {
 }
 
 .btn-creative-text {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Buongiorno Rastellino', serif;
   font-size: 1.8rem;
   font-weight: 600;
   color: #fff;
@@ -2083,10 +2085,10 @@ body {
   border-radius: 0 !important;
 }
 .mc-zigzag-img-wrapper.with-pintora-lightblue-square::before {
-  background-color: #0296FF;
+  background-color: #0b2545;
 }
 .mc-zigzag-img-wrapper.with-pintora-darkblue-square::before {
-  background-color: #01018B;
+  background-color: #0b2545;
 }
 .mc-zigzag-row:nth-child(even) .mc-zigzag-img-wrapper.with-pintora-lightblue-square::before,
 .mc-zigzag-row:nth-child(even) .mc-zigzag-img-wrapper.with-pintora-darkblue-square::before {
@@ -2099,6 +2101,7 @@ body {
 /* Make navbar visible over dark hero sections (detail pages only) */
 body.detail-page .navbar:not(.scrolled):not(.menu-open) .nav-links a,
 body.detail-page .navbar:not(.scrolled):not(.menu-open) .logo {
+  font-family: 'Inter', sans-serif !important;
   color: #fff;
   text-shadow: 0 2px 8px rgba(0,0,0,0.7), 0 4px 20px rgba(0,0,0,0.5);
 }
@@ -2109,4 +2112,5 @@ body.detail-page .navbar:not(.scrolled):not(.menu-open) .hamburger span {
 }
 
 html.skip-intro #intro-preloader { display: none !important; }
-html.skip-intro .navbar .logo { opacity: 1 !important; }
+html.skip-intro .navbar .logo {
+  font-family: 'Inter', sans-serif !important; opacity: 1 !important; }
